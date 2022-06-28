@@ -1,0 +1,23 @@
+applicationSettings:
+  initialModel: "https://github.com/philipteng/AdamRasaRepo/blob/main/models/20220627-235552-radiant-bridge.tar.gz?raw=true"
+
+  # Enable debug mode
+  debugMode: true
+  
+  # -- Token Rasa accepts as authentication token from other Rasa services
+  token: "pP1ctecH"
+
+  # -- Enable credentials configuration for channel connectors
+  credentials:
+    additionalChannelCredentials:
+      
+      rest:
+      
+      socketio:
+        user_message_evt: user_uttered
+        bot_message_evt: bot_uttered
+        session_persistence: true/false   
+
+# -- Exposes the Service externally using a cloud provider's load balancer
+service:
+    type: LoadBalancer
